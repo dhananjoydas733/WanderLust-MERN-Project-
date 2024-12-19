@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row mt-3">
+    <h3>Edit your Listing</h3>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+
+        <div class="mb-3">
+            <label for="title" class="form-lebel">Title</label>
+            <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required />
+            <div class="invalid-feedback">Please Enter Tittle</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-lebel">Description</label>
+            <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+            <div class="invalid-feedback">Please Enter a short Description</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="image" class="form-lebel">Image</label>
+            <input name="listing[image]" value="<%= listing.image %>" type="text" class="form-control" required/>
+            <div class="invalid-feedback">Please Enter a valid Link</div>
+        </div>
+        
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-lebel">Price</label>
+                <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required />
+                <div class="invalid-feedback">Please Enter a Valid Price</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="country" class="form-lebel">Country</label>
+                <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required />
+                <div class="invalid-feedback">Please Enter The Country</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="location" class="form-lebel">Location</label>
+            <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required />
+            <div class="invalid-feedback">Please Enter The Location</div>
+        </div>
+        <button class="btn btn-dark edit-btn mt-3">Edit</button>
+    </form>
+</div>
+<script src="/js/script.js"></script>
