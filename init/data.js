@@ -347,18 +347,6 @@ const sampleListings = [
         location: "Costa Rica",
         country: "Costa Rica",
     },
-    {
-        title: "NIT Silchar Guest House",
-        description:
-            "We Provide You The Best Service",
-        image: {
-            filename: "listingimage",
-            url: "http://josaacounselling.com/wp-content/uploads/2021/03/NIT-Silchar.jpeg",
-        },
-        price: 1800,
-        location: "Silchar",
-        country: "India",
-    },
 ];
 
 module.exports = { data: sampleListings };
